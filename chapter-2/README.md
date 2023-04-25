@@ -1,8 +1,8 @@
-#Chapter 2: Getting Started with RSocket
+# Chapter 2: Getting Started with RSocket
 
-##Core concepts of the RSocket.
+## Core concepts of the RSocket.
 
-##Setting up a basic RSocket application : Hello World.
+## Setting up a basic RSocket application : Hello World.
 
 ## Build the project 
 
@@ -34,7 +34,7 @@ Run the RSC client with the following command:
 java -jar ./rsc-0.4.2.jar --debug --request --data "{\"origin\":\"Client\",\"interaction\":\"Request\"}" --route request-response tcp://localhost:7007 
 ```
 
-##RSocket communication patterns by examples:
+## RSocket communication patterns by examples:
 1. request/response;
 2. fire-and-forget;
 3. and streaming interactions.
