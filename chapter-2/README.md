@@ -21,7 +21,7 @@ We recommend a workstation with the following configurations for working with th
 Run the following command from the directory named **chapter-2**
 
 ```
-./gradlew fatJar 
+./gradlew build 
 ```
 or (at these moments its works;-) )
 
@@ -33,6 +33,12 @@ Run the RSC client with the following command:
 ```
 java -jar ./rsc-0.4.2.jar --debug --request --data "{\"origin\":\"Client\",\"interaction\":\"Request\"}" --route request-response tcp://localhost:7007 
 ```
+Run the Java RSocket requester (client) with the following command:
+
+```
+java -jar ./requester/build/libs/requester.jar 
+```
+
 
 ## RSocket communication patterns by examples:
 1. request/response;
