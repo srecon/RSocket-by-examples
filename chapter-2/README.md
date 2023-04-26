@@ -36,9 +36,14 @@ java -jar ./rsc-0.4.2.jar --debug --request --data "{\"origin\":\"Client\",\"int
 Run the Java RSocket requester (client) with the following command:
 
 ```
-java -jar ./requester/build/libs/requester.jar 
+java -jar ./requester/build/libs/requester.jar or ./gradlew requester:run 
 ```
 
+Invoke the REST API through your favorite browser as shown below:
+
+```
+http://localhost:8080/request-response
+```
 
 ## RSocket communication patterns by examples:
 1. request/response;

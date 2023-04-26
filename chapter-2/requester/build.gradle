@@ -37,6 +37,7 @@ dependencies {
     // spring-shell-starter
     //implementation group: 'org.springframework.shell', name: 'spring-shell-starter', version: '2.0.0.RELEASE'
     implementation 'org.springframework.shell:spring-shell-starter:3.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.6'
 }
 
 application {
