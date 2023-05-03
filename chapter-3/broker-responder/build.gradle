@@ -8,7 +8,8 @@ plugins {
     id 'com.blu.rsocket.java-application-conventions'
 
     id 'org.springframework.boot' version '3.0.6'
-    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+    id 'io.spring.dependency-management' version '1.1.0'
+
 }
 
 repositories {
@@ -16,7 +17,11 @@ repositories {
     mavenCentral()
 }
 
+group = 'com.blu.rsocket'
+version = '0.0.1-SNAPSHOT'
+
 dependencies {
+
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.projectlombok:lombok'
 
@@ -26,9 +31,21 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.6'
     implementation 'org.springframework.boot:spring-boot-starter-actuator:3.0.6'
+
+    //api project(':services-api')
+    implementation project(':services-api')
+    implementation project(':service-config')
 }
 
 application {
     // Define the main class for the application.
     mainClass = 'com.blu.rsocket.responder.RsocketBrokerResponder'
+}
+
+task fatJar(type: Jar) {
+    baseName = 'all-in-one-jar'
+    manifest.attributes["Main-Class"] = "com.blu.rsocket.responder.RsocketBrokerResponder"
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }
