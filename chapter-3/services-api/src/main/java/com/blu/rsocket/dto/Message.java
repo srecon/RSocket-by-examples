@@ -2,10 +2,14 @@ package com.blu.rsocket.dto;
 
 import java.io.Serializable;
 import java.time.Instant;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Message implements Serializable {
 
     private String origin;
@@ -25,35 +29,35 @@ public class Message implements Serializable {
         this.index = index;
     }
 
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
-    }
-
-    public String getInteraction() {
-        return interaction;
-    }
-
-    public void setInteraction(String interaction) {
-        this.interaction = interaction;
-    }
-
-    public long getIndex() {
-        return index;
-    }
-
-    public void setIndex(long index) {
-        this.index = index;
-    }
-
-    public long getCreated() {
-        return created;
-    }
-
-    public void setCreated(long created) {
-        this.created = created;
-    }
+//    public String getOrigin() {
+//        return origin;
+//    }
+//
+//    public void setOrigin(String origin) {
+//        this.origin = origin;
+//    }
+//
+//    public String getInteraction() {
+//        return interaction;
+//    }
+//
+//    public void setInteraction(String interaction) {
+//        this.interaction = interaction;
+//    }
+//
+//    public long getIndex() {
+//        return index;
+//    }
+//
+//    public void setIndex(long index) {
+//        this.index = index;
+//    }
+//
+//    public long getCreated() {
+//        return created;
+//    }
+//
+//    public void setCreated(long created) {
+//        this.created = created;
+//    }
 }

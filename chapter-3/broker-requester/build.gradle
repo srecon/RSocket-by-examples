@@ -22,18 +22,21 @@ version = '0.0.1-SNAPSHOT'
 
 dependencies {
 
-    annotationProcessor 'org.projectlombok:lombok'
-    implementation 'org.projectlombok:lombok'
-
-
     //implementation 'com.alibaba.rsocket:alibaba-rsocket-spring-boot-starter:1.1.4'
 
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.projectlombok:lombok:1.18.26'
 
     implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.6'
     implementation 'org.springframework.boot:spring-boot-starter-actuator:3.0.6'
+    implementation 'org.springframework.boot:spring-boot-starter-rsocket:3.0.6'
+
+    implementation 'com.alibaba.rsocket:alibaba-rsocket-core:1.1.4'
+    implementation 'com.alibaba.rsocket:alibaba-rsocket-spring-boot-starter:1.1.4'
+    //implementation 'com.alibaba.rsocket:alibaba-rsocket-service-common:1.1.4'
 
     implementation project(':services-api')
-    //???
+    //!!! seems
     implementation project(':service-config')
 }
 
