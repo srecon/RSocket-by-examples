@@ -25,19 +25,19 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.projectlombok:lombok'
 
-    implementation 'com.alibaba.rsocket:alibaba-rsocket-core:1.1.4'
-    implementation 'com.alibaba.rsocket:alibaba-rsocket-spring-boot-starter:1.1.4'
-    implementation 'com.alibaba.rsocket:alibaba-rsocket-service-common:1.1.4'
+
+    //implementation 'com.alibaba.rsocket:alibaba-rsocket-spring-boot-starter:1.1.4'
+
 
     implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.6'
     implementation 'org.springframework.boot:spring-boot-starter-actuator:3.0.6'
 
-
     implementation project(':services-api')
+    //???
     implementation project(':service-config')
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'com.blu.rsocket.responder.RsocketBrokerResponder'
+    mainClass = 'com.blu.rsocket.responder.RsocketBrokerRequester'
 }

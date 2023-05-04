@@ -1,11 +1,12 @@
 package com.blu.rsocket.dto;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 //@Data
 //@AllArgsConstructor
 //@NoArgsConstructor
-public class Message {
+public class Message implements Serializable {
 
     private String origin;
     private String interaction;

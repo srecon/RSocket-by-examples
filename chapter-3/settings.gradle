@@ -14,4 +14,4 @@ pluginManagement {
 }
 
 rootProject.name = 'broker'
-include('broker-responder', 'services-api', 'service-config')
+include('broker-responder', 'services-api', 'service-config', 'broker-requester')
