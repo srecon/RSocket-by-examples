@@ -1,0 +1,45 @@
+@startuml
+
+actor Client
+actor Server
+
+== RSocket ==
+Client -> Server : Request-Response
+Client -> Server : Request-Stream
+Client -> Server : Fire-and-Forget
+Client <-> Server : Channel (Bidirectional)
+note right
+  * Reactive Streams
+  * Multiplexing
+  * Multiple Transports (TCP, WebSocket, Aeron)
+end note
+
+== HTTP/2 ==
+Client -> Server : Request-Response
+Client -> Server : Server Push (Limited)
+note right
+  * Binary Framing
+  * Multiplexing
+  * Stream Prioritization
+end note
+
+== gRPC ==
+Client -> Server : Unary RPC (Request-Response)
+Client -> Server : Server Streaming
+Client -> Server : Client Streaming
+Client <-> Server : Bidirectional Streaming
+note right
+  * Built on HTTP/2
+  * Protocol Buffers
+  * Contract-first API design
+end note
+
+== WebSocket ==
+Client <-> Server : Bidirectional Communication
+note right
+  * Single Connection
+  * No Built-in Multiplexing
+  * No Built-in Reactive Streams Support
+end note
+
+@enduml
